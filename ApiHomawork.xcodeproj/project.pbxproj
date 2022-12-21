@@ -62,7 +62,6 @@
 			children = (
 				FA094E14295328BC00243AF3 /* Models */,
 				FA094E0D295323F200243AF3 /* Resources */,
-				FA094E0429531EA500243AF3 /* Info.plist */,
 				FA094E112953244900243AF3 /* Apps */,
 				FA094E102953243D00243AF3 /* ViewControllers */,
 				FA094E0C295323E600243AF3 /* Storyboards */,
@@ -99,6 +98,7 @@
 		FA094E112953244900243AF3 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				FA094E0429531EA500243AF3 /* Info.plist */,
 				FA094DF829531EA300243AF3 /* SceneDelegate.swift */,
 				FA094DF629531EA300243AF3 /* AppDelegate.swift */,
 			);
@@ -336,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ApiHomawork/Info.plist;
+				INFOPLIST_FILE = ApiHomawork/Apps/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -363,7 +363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ApiHomawork/Info.plist;
+				INFOPLIST_FILE = ApiHomawork/Apps/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
