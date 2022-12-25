@@ -15,6 +15,9 @@
 		FA094E0B2953232B00243AF3 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094E0A2953232B00243AF3 /* MainCollectionViewController.swift */; };
 		FA094E0F2953242F00243AF3 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094E0E2953242F00243AF3 /* UserActionCell.swift */; };
 		FA094E13295328A600243AF3 /* PurpleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094E12295328A600243AF3 /* PurpleModel.swift */; };
+		FA6134D12958729700D563A8 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6134D02958729700D563A8 /* HelloViewController.swift */; };
+		FA6134D3295872A600D563A8 /* ByeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6134D2295872A600D563A8 /* ByeViewController.swift */; };
+		FA6134DA2958749A00D563A8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6134D92958749A00D563A8 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		FA094E0A2953232B00243AF3 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		FA094E0E2953242F00243AF3 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
 		FA094E12295328A600243AF3 /* PurpleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleModel.swift; sourceTree = "<group>"; };
+		FA6134D02958729700D563A8 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		FA6134D2295872A600D563A8 /* ByeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByeViewController.swift; sourceTree = "<group>"; };
+		FA6134D92958749A00D563A8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 		FA094DF529531EA300243AF3 /* ApiHomawork */ = {
 			isa = PBXGroup;
 			children = (
+				FA6134DB2958749F00D563A8 /* Services */,
 				FA094E14295328BC00243AF3 /* Models */,
 				FA094E0D295323F200243AF3 /* Resources */,
 				FA094E112953244900243AF3 /* Apps */,
@@ -91,6 +98,8 @@
 			children = (
 				FA094E0E2953242F00243AF3 /* UserActionCell.swift */,
 				FA094E0A2953232B00243AF3 /* MainCollectionViewController.swift */,
+				FA6134D02958729700D563A8 /* HelloViewController.swift */,
+				FA6134D2295872A600D563A8 /* ByeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -111,6 +120,14 @@
 				FA094E12295328A600243AF3 /* PurpleModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FA6134DB2958749F00D563A8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA6134D92958749A00D563A8 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +204,10 @@
 				FA094E0F2953242F00243AF3 /* UserActionCell.swift in Sources */,
 				FA094E0B2953232B00243AF3 /* MainCollectionViewController.swift in Sources */,
 				FA094DF729531EA300243AF3 /* AppDelegate.swift in Sources */,
+				FA6134D12958729700D563A8 /* HelloViewController.swift in Sources */,
+				FA6134DA2958749A00D563A8 /* NetworkManager.swift in Sources */,
 				FA094E13295328A600243AF3 /* PurpleModel.swift in Sources */,
+				FA6134D3295872A600D563A8 /* ByeViewController.swift in Sources */,
 				FA094DF929531EA300243AF3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,10 +9,6 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-enum Link: String {
-    case helloURL = "https://www.boredapi.com/api/activity"
-    case byeURL = "https://rickandmortyapi.com/api/character/108"
-}
 
 enum ButtonsForCells: String, CaseIterable {
     case hello = "Hello"
@@ -40,16 +36,33 @@ class MainCollectionViewController: UICollectionViewController {
     }
 
     // MARK: UICollectionViewDelegate
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let userAction = buttonsForCells[indexPath.item]
         
         switch userAction {
         case .hello:
-            helloButtonPressed()
+            //helloButtonPressed()
+            performSegue(withIdentifier: "hello", sender: nil)
         case .goodbye:
-            byeButtonPressed()
+            //byeButtonPressed()
+            performSegue(withIdentifier: "bye", sender: nil)
         }
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "hello" {
+            guard let helloVC = segue.destination as? HelloViewController else { return }
+            helloVC.fetchHello()
+        }
+        else if segue.identifier == "bye" {
+            guard let byeVC = segue.destination as? ByeViewController else { return }
+            byeVC.fetchBye()
+        }
+            
+    }
+    
     
     // MARK: - Private Methods
     private func successAlert() {
