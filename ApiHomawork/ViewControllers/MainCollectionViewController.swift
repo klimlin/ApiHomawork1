@@ -13,6 +13,8 @@ private let reuseIdentifier = "Cell"
 enum ButtonsForCells: String, CaseIterable {
     case hello = "Hello"
     case goodbye = "Bye"
+    case postRequestWithDict = "POST RQST with Dict"
+    case postRequestWithModel = "POST RQST with Model"
 }
 
 class MainCollectionViewController: UICollectionViewController {
@@ -47,6 +49,10 @@ class MainCollectionViewController: UICollectionViewController {
         case .goodbye:
             //byeButtonPressed()
             performSegue(withIdentifier: "bye", sender: nil)
+        case .postRequestWithDict:
+            postRequestWithDict()
+        case .postRequestWithModel:
+            postRequestWithModel()
         }
     }
     
@@ -146,6 +152,47 @@ extension MainCollectionViewController {
             }
             
     }.resume()
+    }
+    
+    private func postRequestWithDict() {
+        let course = [
+            "name": "Alisha",
+            "age": "24",
+            "education": "master",
+            "family": "single"
+        ]
+        
+        NetworkManager.shared.postRequest(with: course, from: Link.postRequest.rawValue) { [weak self] result in
+            switch result {
+                
+            case .success(let json):
+                print(json)
+                self?.successAlert()
+            case .failure(let error):
+                print(error)
+                self?.failedAlert()
+            }
+        }
+    }
+    
+    private func postRequestWithModel() {
+        
+        let course = Purple(
+            activity: "Moaning",
+            type: "Key",
+            key: "444")
+        
+        NetworkManager.shared.postRequest2(with: course, from: Link.postRequest.rawValue) { [weak self] result in
+            switch result{
+            case .success(let course):
+                print(course)
+                self?.successAlert()
+            case .failure(let error):
+                print(error)
+                self?.failedAlert()
+            }
+        }
+        
     }
     
 }

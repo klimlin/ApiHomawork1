@@ -6,7 +6,7 @@
 //
 
 
-struct Purple: Decodable {
+struct Purple: Codable {
     let activity: String
     let type: String
     let key: String
